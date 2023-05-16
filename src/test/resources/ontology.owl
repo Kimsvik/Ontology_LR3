@@ -1,0 +1,170 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:j.0="http://mpei.ru/LR3#ДЗ,"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:j.1="http://mpei.ru/LR3#">
+  <owl:Class rdf:about="http://mpei.ru/LR3#ДЗ,_ТНЗНП">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://mpei.ru/LR3#Трансформатор"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#ЛЭП"/>
+  <owl:Class rdf:about="http://mpei.ru/LR3#ЗОЗЗ">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://mpei.ru/LR3#Выключатель"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#ДЗТ">
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#Трансформатор"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#АВР">
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#Выключатель"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#МТЗ_С_ПОН">
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#Выключатель"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#МТЗ_ВН">
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#Трансформатор"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#ДЗЛ">
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#ЛЭП"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#Защита_от_перегрузки">
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#Трансформатор"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#МТЗ">
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#ЛЭП"/>
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#Выключатель"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#ДЗ">
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#ЛЭП"/>
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#Выключатель"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#ТО">
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#Выключатель"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://mpei.ru/LR3#ТЗНП">
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#ЛЭП"/>
+    <rdfs:subClassOf rdf:resource="http://mpei.ru/LR3#Трансформатор"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://mpei.ru/LR3#have"/>
+  <owl:ObjectProperty rdf:about="http://mpei.ru/LR3#installed_in"/>
+  <owl:DatatypeProperty rdf:about="http://mpei.ru/LR3#breakerVoltage"/>
+  <owl:DatatypeProperty rdf:about="http://mpei.ru/LR3#lineVoltage"/>
+  <owl:DatatypeProperty rdf:about="http://mpei.ru/LR3#power"/>
+  <owl:DatatypeProperty rdf:about="http://mpei.ru/LR3#winding"/>
+  <owl:DatatypeProperty rdf:about="http://mpei.ru/LR3#mode"/>
+  <owl:DatatypeProperty rdf:about="http://mpei.ru/LR3#protection"/>
+  <owl:DatatypeProperty rdf:about="http://mpei.ru/LR3#voltage"/>
+  <j.1:ДЗ rdf:about="http://mpei.ru/LR3#ИЭУ-7">
+    <rdf:type rdf:resource="http://mpei.ru/LR3#ЗОЗЗ"/>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#ТО"/>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#АВР"/>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#МТЗ"/>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#МТЗ_С_ПОН"/>
+  </j.1:ДЗ>
+  <j.1:ДЗ rdf:about="http://mpei.ru/LR3#ИЭУ-8">
+    <j.1:installed_in>
+      <j.1:Выключатель rdf:about="http://mpei.ru/LR3#BRK-1_6">
+        <j.1:protection>МТЗ</j.1:protection>
+        <j.1:breakerVoltage>6</j.1:breakerVoltage>
+        <j.1:have rdf:resource="http://mpei.ru/LR3#ИЭУ-8"/>
+      </j.1:Выключатель>
+    </j.1:installed_in>
+    <j.1:installed_in>
+      <j.1:Выключатель rdf:about="http://mpei.ru/LR3#BRK-3_35">
+        <j.1:protection>МТЗ</j.1:protection>
+        <j.1:breakerVoltage>35</j.1:breakerVoltage>
+        <j.1:have rdf:resource="http://mpei.ru/LR3#ИЭУ-8"/>
+      </j.1:Выключатель>
+    </j.1:installed_in>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#ЗОЗЗ"/>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#ТО"/>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#АВР"/>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#МТЗ"/>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#МТЗ_С_ПОН"/>
+  </j.1:ДЗ>
+  <j.1:Выключатель rdf:about="http://mpei.ru/LR3#BRK-2_35">
+    <j.1:protection>МТЗ</j.1:protection>
+    <j.1:breakerVoltage>35</j.1:breakerVoltage>
+    <j.1:have>
+      <j.1:ДЗ rdf:about="http://mpei.ru/LR3#ИЭУ-6">
+        <j.1:installed_in rdf:resource="http://mpei.ru/LR3#BRK-2_35"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#ЗОЗЗ"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#ТО"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#АВР"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#МТЗ"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#МТЗ_С_ПОН"/>
+      </j.1:ДЗ>
+    </j.1:have>
+  </j.1:Выключатель>
+  <j.1:Трансформатор rdf:about="http://mpei.ru/LR3#ТДЦ-150000_220/110">
+    <j.1:protection>Защита от перегрузки</j.1:protection>
+    <j.1:winding>3</j.1:winding>
+    <j.1:mode>single</j.1:mode>
+    <j.1:voltage>220</j.1:voltage>
+    <j.1:power>150000</j.1:power>
+    <j.1:have>
+      <j.1:ТЗНП rdf:about="http://mpei.ru/LR3#ИЭУ-1">
+        <j.1:installed_in rdf:resource="http://mpei.ru/LR3#ТДЦ-150000_220/110"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#ДЗ,_ТНЗНП"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#МТЗ_ВН"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#Защита_от_перегрузки"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#ДЗТ"/>
+      </j.1:ТЗНП>
+    </j.1:have>
+  </j.1:Трансформатор>
+  <j.1:Трансформатор rdf:about="http://mpei.ru/LR3#ТДЦ-160000_330/220">
+    <j.1:protection>Защита от перегрузки</j.1:protection>
+    <j.1:protection>Второй_комплект_ДЗТ</j.1:protection>
+    <j.1:protection>Первый_комплект_ДЗТ</j.1:protection>
+    <j.1:winding>3</j.1:winding>
+    <j.1:mode>single</j.1:mode>
+    <j.1:voltage>330</j.1:voltage>
+    <j.1:power>160000</j.1:power>
+    <j.1:have>
+      <j.1:ТЗНП rdf:about="http://mpei.ru/LR3#ИЭУ-4">
+        <j.1:installed_in rdf:resource="http://mpei.ru/LR3#ТДЦ-160000_330/220"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#ДЗ,_ТНЗНП"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#МТЗ_ВН"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#Защита_от_перегрузки"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#ДЗТ"/>
+      </j.1:ТЗНП>
+    </j.1:have>
+  </j.1:Трансформатор>
+  <j.1:Трансформатор rdf:about="http://mpei.ru/LR3#ДЦ-63000_110/10">
+    <j.1:protection>Защита от перегрузки</j.1:protection>
+    <j.1:winding>3</j.1:winding>
+    <j.1:mode>single</j.1:mode>
+    <j.1:voltage>110</j.1:voltage>
+    <j.1:power>63000</j.1:power>
+    <j.1:have>
+      <j.1:ТЗНП rdf:about="http://mpei.ru/LR3#ИЭУ-2">
+        <j.1:installed_in rdf:resource="http://mpei.ru/LR3#ДЦ-63000_110/10"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#ДЗ,_ТНЗНП"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#МТЗ_ВН"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#Защита_от_перегрузки"/>
+        <rdf:type rdf:resource="http://mpei.ru/LR3#ДЗТ"/>
+      </j.1:ТЗНП>
+    </j.1:have>
+  </j.1:Трансформатор>
+  <j.1:МТЗ rdf:about="http://mpei.ru/LR3#ИЭУ-3">
+    <j.1:installed_in>
+      <j.1:ЛЭП rdf:about="http://mpei.ru/LR3#ЛЭП-1_110">
+        <j.1:protection>МТЗ</j.1:protection>
+        <j.1:protection>ТО</j.1:protection>
+        <j.1:protection>АПВ</j.1:protection>
+        <j.1:protection>ТЗНП</j.1:protection>
+        <j.1:protection>ДЗ</j.1:protection>
+        <j.1:protection>ДЗЛ</j.1:protection>
+        <j.1:lineVoltage>110</j.1:lineVoltage>
+        <j.1:have rdf:resource="http://mpei.ru/LR3#ИЭУ-3"/>
+      </j.1:ЛЭП>
+    </j.1:installed_in>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#ТЗНП"/>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#ДЗ"/>
+    <rdf:type rdf:resource="http://mpei.ru/LR3#ДЗЛ"/>
+  </j.1:МТЗ>
+</rdf:RDF>
