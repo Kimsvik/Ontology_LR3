@@ -8,7 +8,7 @@ import java.util.List;
 
 @Getter @Setter
 @AllArgsConstructor
-public class StationObject {
+public class Object {
     private String name;
     private List<String> dataProperties;
     private List<String> objectProperties;

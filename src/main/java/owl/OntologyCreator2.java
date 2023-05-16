@@ -24,7 +24,7 @@ public class OntologyCreator2 {
 
     public static void main(String[] args) {
         OntModel ontModel = createModel();
-        Map<StationObject, List<Protection>> protections = createMap();
+        Map<Object, List<Protection>> protections = createMap();
 
         Map<OntClass, List<OntClass>> createdClasses = createClasses(ontModel, protections);
 
@@ -43,9 +43,9 @@ public class OntologyCreator2 {
         }
     }
 
-    private static Map<StationObject, List<Protection>> createMap() {
+    private static Map<Object, List<Protection>> createMap() {
         return Map.of(
-                new StationObject("Трансформатор",
+                new Object("Трансформатор",
                         List.of(
                                 "power",
                                 "voltage",
@@ -62,7 +62,7 @@ public class OntologyCreator2 {
                         new Protection("ДЗ,_ТНЗНП", List.of("installed_in")),
                         new Protection("ТЗНП", List.of("installed_in"))
                 ),
-                new StationObject("ЛЭП",
+                new Object("ЛЭП",
                         List.of(
                                 "lineVoltage",
                                 "protection"
@@ -75,7 +75,7 @@ public class OntologyCreator2 {
                         new Protection("ТЗНП", List.of("installed_in")),
                         new Protection("МТЗ", List.of("installed_in"))
                 ),
-                new StationObject("Выключатель",
+                new Object("Выключатель",
                         List.of(
                                 "breakerVoltage",
                                 "protection"
@@ -121,10 +121,10 @@ public class OntologyCreator2 {
 
     private static Map<OntClass, List<OntClass>> createClasses(
             OntModel ontModel,
-            Map<StationObject, List<Protection>> protections) {
+            Map<Object, List<Protection>> protections) {
         Map<OntClass, List<OntClass>> classes = new HashMap<>();
 
-        for (Map.Entry<StationObject, List<Protection>> object : protections.entrySet()) {
+        for (Map.Entry<Object, List<Protection>> object : protections.entrySet()) {
             OntClass ontClass = ontModel.createClass(nameSpace + object.getKey().getName());
             List<OntClass> subClassesList = new ArrayList<>();
             for (Protection protection : object.getValue()) {
@@ -140,10 +140,10 @@ public class OntologyCreator2 {
 
     private static List<Map<String, ? extends OntProperty>> createProperties(
             OntModel ontModel,
-            Map<StationObject, List<Protection>> objects) {
+            Map<Object, List<Protection>> objects) {
         Map<String, DatatypeProperty> datatypePropertyMap = new HashMap<>();
         Map<String, ObjectProperty> objectPropertyMap = new HashMap<>();
-        for (Map.Entry<StationObject, List<Protection>> object : objects.entrySet()) {
+        for (Map.Entry<Object, List<Protection>> object : objects.entrySet()) {
             for (String dataProperty : object.getKey().getDataProperties()) {
                 DatatypeProperty datatypeProperty = ontModel.createDatatypeProperty(nameSpace + dataProperty);
                 datatypePropertyMap.put(dataProperty, datatypeProperty);
